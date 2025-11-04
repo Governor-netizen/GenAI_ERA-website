@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <title>GenAI‑ERA – Generative AI for Education &amp; Research in Africa</title>
+  <!-- SEO -->
+  <meta name="description" content="GenAI‑ERA advances responsible, culturally responsive AI for education and research across Africa—events, programs, tools, and partnerships." />
+  <meta name="theme-color" content="#0d3b66" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GenAI‑ERA – Generative AI for Education & Research in Africa" />
+  <meta property="og:description" content="Programs, research, and partnerships to empower educators with ethical, culturally responsive AI." />
+  <meta property="og:image" content="assets/images/celebrate-01.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GenAI‑ERA – Generative AI for Education & Research in Africa" />
+  <meta name="twitter:description" content="Programs, research, and partnerships to empower educators with ethical, culturally responsive AI." />
+  <meta name="twitter:image" content="assets/images/celebrate-01.jpg" />
+
+  <!-- Bootstrap core CSS (fixed path) -->
+  <link href="vendor/boostrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-scholar.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+  <!-- Removed unused Swiper CSS -->
+
+    <!-- Professional GenAI‑ERA Brand Styles -->
+    <style>
+      :root {
+        --brand-orange: #f7931e;
+        --brand-navy: #0d3b66;
+        --brand-light-gray: #f8f9fa;
+        --brand-dark-gray: #343a40;
+        --brand-white: #ffffff;
+      }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; line-height: 1.6; padding-top: 72px; }
+
+      /* Scroll margin to prevent fixed navbar from covering section headers */
+      #vision-block { scroll-margin-top: 80px; }
+
+      /* Header & Navigation */
+  .navbar-brand { font-weight: 800; letter-spacing: 0.5px; }
+  .navbar-dark.bg-dark { background-color: var(--brand-navy) !important; }
+  .navbar-dark .navbar-nav .nav-link { color: #fff; font-weight: 500; }
+  .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link.active { color: var(--brand-orange); }
+  /* Navbar brand with logo */
+  .navbar-brand { display: inline-flex; align-items: center; gap: 10px; }
+  .navbar-brand .logo-img { height: 34px; width: auto; display: inline-block; border-radius: 6px; object-fit: contain; }
+  @media (max-width: 576px) { .navbar-brand .logo-img { height: 30px; } }
+  /* Prevent navbar wrap on large screens by tightening spacing */
+  @media (min-width: 992px) {
+    .navbar .container { padding-left: 8px; padding-right: 8px; }
+    .navbar-brand { gap: 8px; margin-right: 8px; }
+    .navbar-brand .brand-text { font-size: 1.05rem; }
+    /* Right-align and prevent wrapping */
+    .navbar .navbar-collapse .navbar-nav { margin-left: auto !important; justify-content: flex-end; }
+    .navbar-dark .navbar-nav { flex-wrap: nowrap; gap: 2px; }
+    /* Reduce font size by ~18% and tighten padding */
+    .navbar-dark .navbar-nav .nav-link { font-size: 0.85rem; padding: 0.35rem 0.50rem; white-space: nowrap; }
+  }
+
+      /* Main Banner */
+  .main-banner .item-1, .main-banner .item-2, .main-banner .item-3 { background: linear-gradient(135deg, var(--brand-navy) 0%, var(--brand-orange) 100%) !important; color: #fff !important; }
+  .main-banner .hero-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: auto; }
+  .main-banner .hero-block { flex: 0 0 100vw; min-height: 60vh; display: flex; align-items: center; padding: 64px 0; scroll-snap-align: start; }
+  .main-banner .header-text h2 { font-weight: 800; }
+  .main-banner .hero-block { position: relative; }
+  /* Move ALL hero blocks down */
+  .main-banner .hero-block { margin-top: 100px; }
+  /* Readability overlays (lightened) */
+  .main-banner .hero-block::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(13,59,102,0.35) 0%, rgba(247,147,30,0.20) 100%); }
+  /* Removed heavy scrim; rely on subtle gradient + text styling */
+  .main-banner .header-text { position: relative; z-index: 1; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+  .main-banner .header-text .category { display: inline-block; font-weight: 700; letter-spacing: .5px; background: rgba(255,255,255,0.18); color: #fff; padding: 4px 10px; border-radius: 999px; }
+  /* On small screens, give the text a gentle backdrop for readability */
+  @media (max-width: 576px) { .main-banner .header-text { background: rgba(0,0,0,0.18); border-radius: 12px; padding: 12px; } }
+  .hero-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(0,0,0,0.35); color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+  .hero-arrow:hover { background: rgba(0,0,0,0.5); transform: translateY(-50%) scale(1.05); }
+  .hero-arrow.prev { left: 16px; }
+  .hero-arrow.next { right: 16px; }
+  .hero-arrow.disabled, .hero-arrow:disabled { opacity: 0.4; pointer-events: none; }
+  @media (max-width: 576px) { .hero-arrow { width: 40px; height: 40px; } }
+  /* Ensure hero arrows remain tappable on phones */
+  @media (max-width: 576px) {
+    .hero-arrow { z-index: 2; }
+    .hero-arrow.disabled, .hero-arrow:disabled { opacity: 0.7; pointer-events: auto; cursor: pointer; }
+  }
+      .main-button a, .main-button a:hover, .orange-button { background-color: var(--brand-orange) !important; border-color: var(--brand-orange) !important; }
+
+      /* Section Headings */
+      .section-heading h2, .section-heading h6 { color: var(--brand-navy) !important; }
+      .section-heading h6 { color: var(--brand-orange) !important; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+
+      /* Professional Tab System */
+      .professional-tabs { border-bottom: 3px solid var(--brand-light-gray); margin-bottom: 40px; }
+      .professional-tabs .nav-tabs { border: none; justify-content: center; }
+      .professional-tabs .nav-link { border: none; border-radius: 0; padding: 15px 30px; font-weight: 600; color: var(--brand-dark-gray); background: transparent; border-bottom: 3px solid transparent; transition: all 0.3s ease; }
+      .professional-tabs .nav-link:hover { color: var(--brand-orange); border-bottom: 3px solid var(--brand-orange); }
+      .professional-tabs .nav-link.active { color: var(--brand-navy); border-bottom: 3px solid var(--brand-navy); font-weight: 700; }
+
+      /* Team / Exec Member Cards */
+  .team-member-card { background: var(--brand-white); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 30px; text-align: center; margin-bottom: 30px; transition: all 0.2s ease; height: 100%; }
+      .team-member-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+      .team-member-card img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid var(--brand-orange); }
+    /* Fine-tune face centering for specific portraits */
+    .team-member-card img.face-center { object-position: 50% 38%; }
+      .team-member-card h4 { color: var(--brand-navy); font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+      .team-member-card .position { color: var(--brand-orange); font-size: 14px; font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .team-member-card .location { color: #666; font-size: 13px; margin-bottom: 15px; font-style: italic; }
+      .team-member-card .description { color: #666; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }
+      .board-member .team-member-card { border: 2px solid var(--brand-navy); }
+      .board-member .team-member-card img { border: 4px solid var(--brand-navy); width: 140px; height: 140px; }
+      .board-member .team-member-card h4 { font-size: 22px; }
+      .executive-member .team-member-card { border: 2px solid var(--brand-orange); }
+  /* Make executive frames same size as board */
+  .executive-member .team-member-card img { width: 140px; height: 140px; }
+  /* Make entire event cards clickable when a stretched-link exists */
+  .event-card { position: relative; }
+      .social-icons { display: flex; justify-content: center; gap: 10px; padding-left: 0; margin: 0; list-style: none; }
+      .social-icons a { color: #6b7280; }
+      .social-icons a:hover { color: var(--brand-orange); }
+
+    /* Research & Grants cards */
+    .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 10px; }
+  .resource-card { background: var(--brand-white); border-radius: 14px; padding: 22px; box-shadow: 0 10px 24px rgba(0,0,0,0.08); transition: transform .2s ease, box-shadow .2s ease; height: 100%; position: relative; cursor: pointer; }
+  .resource-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,0,0,0.12); }
+    .resource-card .badge { display: inline-block; background: var(--brand-orange); color: #fff; font-weight: 700; padding: 6px 10px; border-radius: 10px; font-size: 12px; letter-spacing: .3px; margin-bottom: 10px; }
+    .resource-card h5 { color: var(--brand-navy); font-weight: 700; line-height: 1.3; margin: 6px 0 10px; }
+    .resource-card p { color: #4b5563; margin-bottom: 10px; }
+    /* Unbold text inside News (milestones) section while keeping semantic <strong> markup */
+    .section.milestones .milestone-content,
+    .section.milestones .milestone-content h4,
+    .section.milestones .milestone-content p,
+    .section.milestones .milestone-content strong {
+      font-weight: 400 !important;
+    }
+    .resource-card .meta { color: #6b7280; font-size: 13px; }
+  .resource-card a.stretched-link { position: absolute; inset: 0; z-index: 1; color: inherit; }
+  /* Visible affordances: focus outline and hover hint */
+  .resource-card a.stretched-link:focus-visible { outline: 3px solid rgba(247,147,30,0.6); outline-offset: 4px; border-radius: 12px; }
+  .resource-card:focus-within { box-shadow: 0 16px 36px rgba(0,0,0,0.14), 0 0 0 3px rgba(247,147,30,0.28); }
+  .resource-card::after { content: 'Open →'; position: absolute; right: 12px; bottom: 12px; font-size: 12px; font-weight: 700; color: var(--brand-orange); background: rgba(247,147,30,0.08); padding: 4px 8px; border-radius: 999px; opacity: 0; transform: translateY(4px); transition: opacity .15s ease, transform .15s ease; pointer-events: none; }
+  .resource-card:hover::after, .resource-card:focus-within::after { opacity: 1; transform: translateY(0); }
+
+      /* Footer social icons: larger and more prominent */
+      .footer-social { gap: 16px; }
+      .footer-social a {
+        font-size: 24px; /* bigger icon */
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--brand-navy);
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+        /* Mobile tap friendliness */
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        pointer-events: auto;
+        position: relative;
+        z-index: 10;
+      }
+      .footer-social a:hover {
+        background: var(--brand-orange);
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+      }
+      /* Ensure the icon glyph doesn't eat taps */
+      .footer-social a i { pointer-events: none; }
+      /* Keep footer above any stray overlays */
+      footer { position: relative; z-index: 10; }
+      /* Prevent preloader overlay from intercepting taps */
+      #js-preloader { pointer-events: none; }
+  /* Back to top button */
+  .back-to-top { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: var(--brand-orange); color: #fff; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 10px 24px rgba(0,0,0,0.2); cursor: pointer; opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility 0s linear .2s, transform .2s ease; z-index: 1030; }
+  .back-to-top.show { opacity: 1; visibility: visible; transition: opacity .2s ease, visibility 0s linear 0s; }
+  .back-to-top:hover { transform: translateY(-2px); }
+
+      /* Event Cards */
+  .event-card { background: var(--brand-white); border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 30px; transition: all 0.2s ease; }
+      .event-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.15); }
+      .event-card img { width: 100%; height: 200px; object-fit: cover; }
+      .event-card .event-content { padding: 25px; }
+      .event-category { background: var(--brand-orange); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 15px; }
+
+  /* Events: equal-height cards */
+  .events .row { align-items: stretch; }
+  .events .col-lg-4.col-md-6 { display: flex; }
+  .events .event-card { display: flex; flex-direction: column; height: 100%; width: 100%; }
+  .events .event-card .event-content { display: flex; flex-direction: column; flex: 1 1 auto; }
+  .events .event-card .event-content .orange-button { margin-top: auto; align-self: flex-start; }
+
+  /* Program Cards equal height */
+  .events_item { display: flex; flex-direction: column; height: 100%; background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); overflow: hidden; }
+  .events_item .down-content { margin-top: auto; padding-bottom: 16px; }
+  .events_item .thumb img { width: 100%; height: 200px; object-fit: cover; }
+
+      /* Fun Facts */
+      .fun-facts { background: linear-gradient(135deg, var(--brand-navy), var(--brand-orange)); color: white; }
+      .fun-facts .timer { color: white !important; font-size: 48px !important; font-weight: 700; }
+
+      /* Tools */
+      .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 30px; }
+  .tool-item { background: var(--brand-white); border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: all 0.2s ease; position: relative; cursor: pointer; }
+      .tool-item:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+    .tool-item a.tool-link { display: block; color: inherit; text-decoration: none; }
+    .tool-item a.tool-link:focus-visible { outline: 2px solid var(--brand-orange); outline-offset: 3px; border-radius: 8px; }
+      .tool-icon { width: 50px; height: 50px; background: linear-gradient(135deg, var(--brand-orange), #ff6b35); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; color: white; font-weight: 700; }
+      /* Hover hint and focus ring for tool cards */
+      .tool-item::after { content: 'Open →'; position: absolute; right: 12px; bottom: 12px; font-size: 12px; font-weight: 700; color: var(--brand-orange); background: rgba(247,147,30,0.08); padding: 4px 8px; border-radius: 999px; opacity: 0; transform: translateY(4px); transition: opacity .15s ease, transform .15s ease; pointer-events: none; }
+      .tool-item:hover::after, .tool-item:focus-within::after { opacity: 1; transform: translateY(0); }
+      .tool-item:focus-within { box-shadow: 0 10px 28px rgba(0,0,0,0.16), 0 0 0 3px rgba(247,147,30,0.28); }
+
+      /* Programs Filter */
+      .event_filter { display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; padding: 0; list-style: none; }
+      .event_filter li { margin: 5px 10px; }
+      .event_filter a { padding: 10px 25px; background: var(--brand-light-gray); color: var(--brand-dark-gray); text-decoration: none; border-radius: 25px; font-weight: 500; transition: all 0.3s ease; }
+      .event_filter a.is_active, .event_filter a:hover { background: var(--brand-orange); color: white; }
+
+      /* Programs (Core Services) equal-height cards */
+      .programs-section {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 24px;
+        padding: 40px 0;
+      }
+      .program-card { 
+        flex: 1 1 320px;
+        background-color: #f9f9ff;
+        border-radius: 16px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.2s ease;
+        min-height: 380px;
+      }
+      .program-card:hover { transform: translateY(-6px); }
+      .program-card .icon { display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 14px; background: linear-gradient(135deg, var(--brand-orange), #ff9f4d); box-shadow: 0 6px 16px rgba(0,0,0,0.08); margin-bottom: 14px; }
+      .program-card .icon img { width: 36px; height: 36px; object-fit: contain; filter: brightness(0) invert(1); }
+      .program-card h4 { color: var(--brand-navy); font-weight: 700; margin: 8px 0 10px; }
+      .program-card p { color: #4b5563; margin-bottom: 16px; }
+      .program-card .discover-btn, .program-card .main-button a {
+        margin-top: auto;
+        align-self: flex-start;
+      }
+      @media (max-width: 576px) { .program-card { min-height: 340px; } }
+
+      /* Modern modal visuals */
+      .modal-content { border: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,0.25); }
+      .modal-header { border-bottom: 0; padding: 16px 20px; }
+      .modal-body { padding: 0 20px 20px; }
+      .modal-footer { border-top: 0; padding: 16px 20px 20px; }
+
+      /* Modal hero wrapper with subtle dark overlay */
+      .modal-hero-wrap { position: relative; }
+      .modal-hero-wrap::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.35) 100%); pointer-events: none; }
+      .modal-hero { width: 100%; height: 300px; object-fit: cover; display: block; }
+      @media (max-width: 576px) { .modal-hero { height: 220px; } }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .professional-tabs .nav-link { padding: 10px 15px; font-size: 14px; }
+        .team-member-card img { width: 100px; height: 100px; }
+        .board-member .team-member-card img { width: 120px; height: 120px; }
+        .executive-member .team-member-card img { width: 120px; height: 120px; }
+      }
+  /* Preloader fallback */
+  .js-preloader.loaded { opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility 0s linear .3s; }
+
+  /* Reveal-on-scroll animations (faster) */
+  .reveal-up, .reveal-left, .reveal-right { opacity: 0; will-change: transform, opacity; transition: opacity var(--reveal-speed, .18s) cubic-bezier(.2,.8,.2,1), transform var(--reveal-speed, .18s) cubic-bezier(.2,.8,.2,1); transition-delay: var(--reveal-delay, 0s); }
+    .reveal-up { transform: translateY(16px); }
+    .reveal-left { transform: translateX(-20px); }
+    .reveal-right { transform: translateX(20px); }
+      .in-view { opacity: 1 !important; transform: none !important; }
+
+      /* Respect reduced motion */
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-up, .reveal-left, .reveal-right { opacity: 1; transform: none; transition: none; }
+      }
+
+      /* High-contrast text helpers */
+      .text-section h1, .text-section h2, .text-section h3,
+      .text-section p, .text-section a { color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+      .text-section a.btn { text-shadow: none; }
+  /* Webinars */
+  .webinar-card { background: #fff; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); padding: 20px; height: 100%; }
+  .webinar-card h4 { color: var(--brand-navy); font-weight: 700; }
+  .webinar-card a { color: var(--brand-navy); font-weight: 600; }
+  .webinar-card a:hover { color: var(--brand-orange); }
+
+      /* Milestones & Celebrations */
+      .milestones { background: var(--brand-light-gray); }
+      .milestone-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); display: flex; flex-direction: column; height: 100%; transition: transform .2s ease, box-shadow .2s ease; }
+      .milestone-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+      .milestone-thumb img { width: 100%; height: 320px; object-fit: cover; display: block; }
+      .milestone-content { padding: 18px 20px 20px; }
+      .milestone-content h4 { color: var(--brand-navy); margin-bottom: 8px; font-weight: 700; }
+      .milestone-content p { color: #4b5563; margin: 0; }
+      /* News & Blog uses default section heading colors on home page */
+    </style>
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header / Navbar ***** -->
+    <header class="header-area">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" aria-label="Main navigation">
+        <div class="container">
+          <a class="navbar-brand" href="#top" aria-label="GenAI‑ERA home">
+            <img class="logo-img" src="assets/images/logo.png" alt="GenAI‑ERA logo" loading="eager" decoding="async" />
+            <span class="brand-text">GenAI‑ERA</span>
+          </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarMain">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#vision-block">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+              <li class="nav-item"><a class="nav-link" href="#videos">Videos</a></li>
+              <li class="nav-item"><a class="nav-link" href="news.html">News &amp; Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tools">AI Tools</a></li>
+              <li class="nav-item"><a class="nav-link" href="#research">Publications</a></li>
+              <li class="nav-item"><a class="nav-link" href="#grants">Grant Opportunities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Partner with Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ***** Main Banner (Stacked sections, no carousel) ***** -->
+    <div class="main-banner" id="top">
+      <div class="hero-track">
+  <section class="hero-block item-1" id="vision-hero">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-xl-8">
+                <div class="header-text text-section">
+                  <span class="category">Our Vision</span>
+                  <h2>Generative AI for Education and Research in Africa</h2>
+                  <p>At GenAI‑ERA Hub, we aim to extend Generative AI literacy and resources to educators at all levels—teacher educators, in‑service teachers, and pre‑service teachers. By incorporating global benchmarks such as the UNESCO AI Literacy Framework, OECD AI Principles, and local education standards, our vision is to promote the responsible use of AI in classrooms and empower academic communities throughout Africa.</p>
+                  <div class="buttons d-flex gap-2 flex-wrap">
+                    <a class="btn btn-warning" href="#programs">Explore Programs</a>
+                    <a class="btn btn-outline-light" href="#vision-block"><i class="fa fa-play"></i> Discover Our Core Services</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="hero-arrow prev" aria-label="Previous hero section"><i class="fa fa-angle-left" aria-hidden="true"></i><span class="visually-hidden">Previous</span></button>
+          <button type="button" class="hero-arrow next" aria-label="Next hero section"><i class="fa fa-angle-right" aria-hidden="true"></i><span class="visually-hidden">Next</span></button>
+        </section>
+        <section class="hero-block item-2">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-xl-8">
+                <div class="header-text text-section">
+                  <span class="category">Our Mission</span>
+                  <h2>Empowering Educators Through Free GenAI Clubs &amp; Hubs</h2>
+                  <p>Our mission is to establish accessible, free‑of‑charge GenAI clubs and hubs that offer hands‑on experience with AI tools and promote critical discussions on responsible AI applications. We focus on recruiting stakeholders from underrepresented regions—particularly in Global South—to foster global collaboration in innovative teaching, research, and assessment practices using GenAI.</p>
+                  <div class="buttons d-flex gap-2 flex-wrap">
+                    <a class="btn btn-warning" href="#contact">Join Us Today</a>
+                    <a class="btn btn-outline-light" href="#programs"><i class="fa fa-play"></i> See Our Initiatives</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="hero-arrow prev" aria-label="Previous hero section"><i class="fa fa-angle-left" aria-hidden="true"></i><span class="visually-hidden">Previous</span></button>
+          <button type="button" class="hero-arrow next" aria-label="Next hero section"><i class="fa fa-angle-right" aria-hidden="true"></i><span class="visually-hidden">Next</span></button>
+        </section>
+        <section class="hero-block item-3">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 col-xl-8">
+                <div class="header-text text-section">
+                  <span class="category">Our Impact</span>
+                  <h2>Connecting Global Educators &amp; Researchers</h2>
+                  <p>With bi‑weekly virtual and in‑person meetings, dynamic webinars, and collaborative research projects, GenAI‑ERA Hub bridges the digital divide by equipping educators with innovative tools, practical resources, and supportive cross‑cultural networking opportunities. Our initiatives empower international first‑generation students and established scholars alike to lead change within their communities.</p>
+                  <div class="buttons d-flex gap-2 flex-wrap">
+                    <a class="btn btn-warning" href="#team">Meet Our Team</a>
+                    <a class="btn btn-outline-light" href="#contact"><i class="fa fa-play"></i> Partner with Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="hero-arrow prev" aria-label="Previous hero section"><i class="fa fa-angle-left" aria-hidden="true"></i><span class="visually-hidden">Previous</span></button>
+          <button type="button" class="hero-arrow next" aria-label="Next hero section"><i class="fa fa-angle-right" aria-hidden="true"></i><span class="visually-hidden">Next</span></button>
+        </section>
+      </div>
+    </div>
+
+    <!-- ***** Services Section Start ***** -->
+    <div class="services section" id="vision-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-heading">
+              <h6>Our Core Services</h6>
+              <h2>Transforming Education Through AI Innovation</h2>
+            </div>
+          </div>
+        </div>
+        <div class="programs-section">
+          <div class="program-card reveal-up" style="--reveal-delay:.0s; --reveal-speed:.16s">
+            <div class="icon"><img src="assets/images/service-01.png" alt="GenAI Literacy" /></div>
+            <h4>GenAI Literacy Programs</h4>
+            <p>Comprehensive training programs designed to build AI literacy among educators, covering fundamentals, classroom applications, and ethics in education.</p>
+            <a class="btn btn-warning discover-btn" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modal-literacy" aria-controls="modal-literacy">Discover More</a>
+          </div>
+          <div class="program-card reveal-up" style="--reveal-delay:.02s; --reveal-speed:.16s">
+            <div class="icon"><img src="assets/images/service-02.png" alt="Digital Pedagogy Tools" /></div>
+            <h4>Digital Pedagogy Tools</h4>
+            <p>Access AI tools for lesson planning, content creation, assessment design, and personalized learning to enhance delivery and engagement.</p>
+            <a class="btn btn-warning discover-btn" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modal-pedagogy" aria-controls="modal-pedagogy">Discover More</a>
+          </div>
+          <div class="program-card reveal-up" style="--reveal-delay:.04s; --reveal-speed:.16s">
+            <div class="icon"><img src="assets/images/service-03.png" alt="Research Collaboration" /></div>
+            <h4>Research Collaboration</h4>
+            <p>Facilitating international partnerships, peer‑reviewed publications, and projects that advance AI in education across African contexts.</p>
+            <a class="btn btn-warning discover-btn" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modal-research" aria-controls="modal-research">Discover More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Services Section End ***** -->
+
+    <!-- Modals: Discover More Details -->
+    <div class="modal fade" id="modal-literacy" tabindex="-1" aria-labelledby="modal-literacy-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-hero-wrap">
+            <img class="modal-hero" src="assets/images/genai-literacy-programs.jpg" alt="GenAI Literacy Programs" loading="lazy" decoding="async" />
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-literacy-label">GenAI Literacy Programs</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>At GenAI‑ERA Hub, discovery goes beyond learning about AI—it is about reimagining education through innovation, inclusivity, and African perspectives. Our initiatives are grounded in the belief that educators are central to shaping how Generative AI transforms teaching, learning, and research across the continent. Through our programs, we invite educators, researchers, and policymakers to join a movement that bridges global AI competencies with local educational realities.</p>
+            <p>Participants in our literacy programs gain access to a dynamic ecosystem of resources—from interactive AI‑powered teaching tools and collaborative research opportunities to mentorship circles led by international experts. Each training module is intentionally designed to strengthen educators’ confidence in using Generative AI responsibly and creatively, emphasizing classroom relevance, cultural authenticity, and ethical engagement.</p>
+            <p>Our “AI for Educators and Researchers” series empowers participants to:</p>
+            <ul>
+              <li>Co‑design classroom activities and assessments using AI‑assisted tools tailored to African contexts.</li>
+              <li>Collaborate with a network of scholars advancing equitable AI education practices.</li>
+              <li>Access open‑source materials, research datasets, and professional learning communities that extend beyond the classroom.</li>
+            </ul>
+            <p>We believe that true literacy in AI is not merely about technical mastery but about understanding its social, cultural, and educational implications. The GenAI‑ERA Hub is therefore more than a training center—it is a collaborative platform for thought leadership, enabling educators to shape the ethical and transformative use of AI across Africa’s schools, colleges, and universities. Join us in this journey to cultivate AI‑empowered educators who will inspire the next generation of African innovators.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- ***** Meet The Founder Modal ***** -->
+  <div class="modal fade" id="modal-founders-motivation" tabindex="-1" aria-labelledby="modal-founders-motivation-label" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-2">
+              <img src="assets/images/logo.png" alt="GenAI‑ERA logo" style="height:28px;width:auto;border-radius:6px;object-fit:contain" />
+              <h5 class="modal-title" id="modal-founders-motivation-label">Meet The Founder</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="p-4 p-md-5">
+              <div class="container-fluid">
+                <div class="row g-4 align-items-start">
+                  <div class="col-12 col-lg-10">
+                    <h2 class="display-6" style="font-weight:800;color:var(--brand-navy);letter-spacing:.2px">Matthew Nyaaba</h2>
+                    <p class="lead mb-3" style="color:#374151">Leads the strategic vision, international partnerships, and innovation efforts of GenAI‑ERA, advancing AI integration across African educational systems.</p>
+                    <div class="content" style="font-size:1.025rem;line-height:1.85;color:#374151">
+                      <p>He is a teacher educator whose career has been shaped by a commitment to equitable, inclusive education and the thoughtful application of emerging technologies in teaching and learning. Matthew’s early research focused on the full implementation and evaluation of Teacher Education in Sub‑Saharan Africa (TESSA) Open Educational Resources (OER), a foundation that inspired his ongoing advocacy for open, contextually relevant, and teacher‑centered innovations throughout the Global South. As a PhD candidate at the University of Georgia, USA (UGA) and a graduate researcher with the AI4STEM Education Center, UGA, Matthew was influenced by the Center’s pioneering work on AI in STEM education. He helped lead early nationwide webinars and cross‑cultural research collaborations between AI4STEM and universities in Ghana. Through these experiences, he recognized the growing fear of a widening digital divide and the critical absence of Africa-centered AI tools and frameworks. This reinforced his belief that AI integration in education must be guided by cultural relevance, equity, and local ownership to avoid reinforcing global inequalities. This vision gave rise to GenAI‑ERA, Generative AI for Education and Research in Africa, a nonprofit initiative dedicated to democratizing AI literacy, co‑creating culturally responsive AI tools, and building capacity among African educators to shape AI’s future in education. GenAI‑ERA has grown into a vibrant network, sometimes drawing over 500 educators, researchers, and students per session, with active engagement across Africa and beyond. This dream became a reality through the enthusiastic commitment of co‑founders and executive members who share a unified mission: to create inclusive, ethical, and transformative AI solutions for African education systems.</p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-2 d-flex flex-column align-items-lg-end">
+                    <a class="btn btn-warning mb-2" href="#contact">Partner with Us</a>
+                    <a class="btn btn-outline-secondary" href="#research">Publications</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-pedagogy" tabindex="-1" aria-labelledby="modal-pedagogy-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-hero-wrap">
+            <img class="modal-hero" src="assets/images/digital%20pedagogy.jpg" alt="Digital Pedagogy" loading="lazy" decoding="async" />
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-pedagogy-label">Digital Pedagogy Tools</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>At GenAI‑ERA Hub, we believe that effective digital pedagogy begins with empowering educators to design, create, and assess learning experiences that reflect both innovation and cultural relevance. Our suite of AI‑driven tools provides teachers and researchers with practical solutions for lesson planning, content creation, assessment design, and personalized learning—all aimed at enhancing instructional delivery, student engagement, and meaningful learning outcomes.</p>
+            <p>These tools are carefully selected and developed through collaborative research and design partnerships that integrate global technological advances with the realities of African classrooms. Educators can use our AI Lesson Planner to generate context‑responsive lesson outlines aligned with national curricula, or apply the Culturally Responsive Assessment Generator to design fair and inclusive evaluation tasks. Our AI Content Studio supports the development of multimedia materials—from text and visuals to simulations—that make complex concepts accessible and engaging for diverse learners.</p>
+            <p>Beyond providing ready‑to‑use applications, GenAI‑ERA Hub emphasizes pedagogical intentionality, ensuring that technology amplifies the teacher’s role rather than replacing it. Each tool is supported by guidance on ethical use, data privacy, and responsible integration into classroom practice.</p>
+            <p>Through hands‑on workshops and open‑access resources, educators learn how to adapt these tools to their subject areas, creating interactive and student‑centered learning environments. Whether in urban universities or rural basic schools, our digital pedagogy tools serve as bridges between innovation and inclusion, making high‑quality learning experiences achievable for all.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-research" tabindex="-1" aria-labelledby="modal-research-label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-hero-wrap">
+            <img class="modal-hero" src="assets/images/research-collaboration.jpg" alt="Research Collaboration" loading="lazy" decoding="async" />
+          </div>
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-research-label">Research Collaboration</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>At GenAI‑ERA Hub, research is at the heart of our mission to transform education through Generative AI. We foster a culture of collaborative inquiry and knowledge co‑creation, connecting scholars, practitioners, and institutions across Africa and beyond to advance responsible, evidence‑based integration of AI in education. Through these partnerships, we aim to generate actionable insights, inform policy, and strengthen the global dialogue on equity‑driven innovation.</p>
+            <p>Our collaboration model is built on three pillars: partnership, publication, and practice. We facilitate international and inter‑institutional projects that explore how AI can enhance teaching, learning, and assessment within diverse cultural and linguistic settings. These partnerships bring together educators, technologists, and policymakers to develop context‑aware frameworks, localized AI tools, and inclusive implementation models that reflect the realities of African classrooms.</p>
+            <p>Through our Research Exchange Network, members engage in joint studies, data sharing, and capacity‑building activities, while also contributing to peer‑reviewed publications and open‑access repositories that disseminate findings globally. The Hub also supports early‑career researchers by offering mentorship in research design, writing, and scholarly communication, ensuring that African voices are represented in the international AI‑in‑education discourse.</p>
+            <p>Beyond academia, GenAI‑ERA Hub encourages action research that bridges theory and practice, translating insights from classrooms into scalable educational innovations. By promoting collaboration across continents, we envision an ecosystem where African educators not only adopt AI technologies but actively shape their development and governance. Join us as we build networks of innovation and scholarship that redefine the future of education through shared expertise and collective action.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ***** Events Section Start ***** -->
+    <div class="section events" id="events">
+      <div class="container">
+  <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>Events</h6><h2> GenAI‑ERA Events</h2></div></div></div>
+        <div class="row">
+          <!-- Most recent first: 19 Sept 2025 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card reveal-left h-100" style="--reveal-delay:.0s"><img src="assets/images/event-06.jpg" alt="AI Policy &amp; Ethics Forum" /><div class="event-content"><span class="event-category">UNESCO Webinar</span><h4>AI Policy &amp; Ethics Forum</h4><p class="text-muted">GenAI‑ERA is pleased to invite you to a special webinar on the UNESCO Artificial Intelligence Framework for Students, an important guide designed to enhance students’ understanding and responsible engagement with AI.</p><p class="mb-2"><strong>Date:</strong> 19 Sept 2025 &nbsp; | &nbsp; <strong>Duration:</strong> 2 Hours &nbsp; | &nbsp; <strong>Price:</strong> Free</p><a class="stretched-link" href="https://forms.gle/WroZKhn2sNyT5UXY8" target="_blank" rel="noopener" aria-label="Register for AI Policy &amp; Ethics Forum (UNESCO)"></a></div></div>
+          </div>
+          <!-- 29 Aug 2025 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card reveal-up h-100" style="--reveal-delay:.04s"><img src="assets/images/event-04.jpg" alt="GenAI Club Launch &amp; Networking" /><div class="event-content"><span class="event-category">AI Literacy Workshop</span><h4>Webinar on Prompt Engineering</h4><p class="text-muted">Practical AI Prompt Strategies for Designing Authentic Curriculum in Underserved Contexts.</p><p class="mb-2"><strong>Date:</strong> 29 Aug 2025 &nbsp; | &nbsp; <strong>Duration:</strong> 1 Hour &nbsp; | &nbsp; <strong>Price:</strong> Free</p><a class="stretched-link" href="https://forms.gle/xZkTD81Pb1ZyduJp6" target="_blank" rel="noopener" aria-label="Register for GenAI Club Launch &amp; Networking"></a></div></div>
+          </div>
+          <!-- 27 Apr 2025 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card reveal-right h-100" style="--reveal-delay:.08s"><img src="assets/images/event-01.jpg" alt="A Call For Forum Discussion: GenAI in African Classrooms" /><div class="event-content"><span class="event-category">Community Meetup</span><h4>A Call For Forum Discussion: GenAI in African Classrooms</h4><p class="text-muted">Effective Use of Artificial Intelligence in Education</p><p class="mb-2"><strong>Date:</strong> 27 Apr 2025 &nbsp; | &nbsp; <strong>Duration:</strong> 3 Hours &nbsp; | &nbsp; <strong>Price:</strong> Free</p></div></div>
+          </div>
+          <!-- 12 Apr 2025 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card reveal-left h-100" style="--reveal-delay:.12s"><img src="assets/images/event-03.jpg" alt="AI in Educational Research" /><div class="event-content"><span class="event-category">Research &amp; Innovation Forum</span><h4>AI in Educational Research</h4><p class="mb-2"><strong>Date:</strong> 12 Apr 2025 &nbsp; | &nbsp; <strong>Duration:</strong> 4 Hours &nbsp; | &nbsp; <strong>Price:</strong> Free</p></div></div>
+          </div>
+          <!-- 08 Mar 2025 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="event-card reveal-up h-100" style="--reveal-delay:.16s"><img src="assets/images/event-02.jpg" alt="Effective Use of Artificial Intelligence in Education" /><div class="event-content"><span class="event-category">GenAI Club Launch &amp; Networking</span><h4>Effective Use of Artificial Intelligence in Education</h4><p class="mb-2"><strong>Date:</strong> 08 Mar 2025 &nbsp; | &nbsp; <strong>Duration:</strong> 2 Hours &nbsp; | &nbsp; <strong>Price:</strong> Free</p><a class="stretched-link" href="https://forms.gle/xZkTD81Pb1ZyduJp6" target="_blank" rel="noopener" aria-label="Register for Effective Use of AI in Education (Prompt Engineering)"></a></div></div>
+          </div>
+          <!-- TBA: place last -->
+          
+        </div>
+      </div>
+    </div>
+    <!-- ***** Events Section End ***** -->
+
+    <!-- ***** Featured Videos Section Start ***** -->
+    <section class="section" id="videos">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-heading">
+              <h6>Videos</h6>
+              <h2>Featured From Our YouTube</h2>
+              <p>Watch a few highlights below, and explore more on our YouTube channel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Early video (YouTube Shorts) -->
+          <div class="col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9 video-card"><iframe src="https://www.youtube.com/embed/nB-28RX9Avg" title="YouTube Shorts: Featured" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9 video-card"><iframe src="https://www.youtube.com/embed/lxJAzdUwqmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9 video-card"><iframe src="https://www.youtube.com/embed/sUFvPhJt0zA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9 video-card"><iframe src="https://www.youtube.com/embed/uTnhcq8nxD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="ratio ratio-16x9 video-card"><iframe src="https://www.youtube.com/embed/ftpA7hHZBak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col text-center">
+            <a class="btn btn-danger" href="https://www.youtube.com/@GenAIERA-g5t" target="_blank" rel="noopener" aria-label="More on GenAI‑ERA YouTube">More on YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Featured Videos Section End ***** -->
+
+    <!-- ***** Programs Section Start ***** -->
+    <section class="section courses" id="programs">
+      <div class="container">
+        <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>Featured Programs</h6><h2>Professional Development Programs</h2></div></div></div>
+        <ul class="event_filter">
+          <li><a class="is_active" href="#" data-filter="*">Show All</a></li>
+          <li><a href="#" data-filter=".literacy">GenAI Literacy</a></li>
+          <li><a href="#" data-filter=".pedagogy">Digital Pedagogy</a></li>
+          <li><a href="#" data-filter=".research">Educational Research</a></li>
+        </ul>
+        <div class="row event_box">
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer literacy"><div class="events_item reveal-up" style="--reveal-delay: .0s"><div class="thumb"><a href="#"><img src="assets/images/course-01.jpg" alt="AI and STEM Education in Underserved Communities" /></a><span class="category">GenAI Literacy</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Matthew Nyaaba</span><small class="text-muted d-block">Invited podcast with EduVision Ghana</small><h4>AI and STEM Education in Underserved Communities</h4></div></div></div>
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer pedagogy"><div class="events_item reveal-up" style="--reveal-delay: .04s"><div class="thumb"><a href="#"><img src="assets/images/course-02.jpg" alt="Empowering Teaching Strategies with AI Tools" /></a><span class="category">Digital Pedagogy</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Macharious Nabang</span><h4>Empowering Teaching Strategies with AI Tools</h4></div></div></div>
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer literacy research"><div class="events_item reveal-up" style="--reveal-delay: .08s"><div class="thumb"><a href="#"><img src="assets/images/course-03.jpg" alt="Environmentally Friendly AI: Bridging AI and Learning" /></a><span class="category">Global Collaboration</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Zack Kinzler</span><h4>Environmentally Friendly AI: Bridging AI and Learning</h4></div></div></div>
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer research"><div class="events_item reveal-up" style="--reveal-delay: .12s"><div class="thumb"><a href="#"><img src="assets/images/course-04.jpg" alt="AI‑Driven Educational Research Methodologies" /></a><span class="category">Educational Research</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Dr. Patrick Kyeremeh</span><h4>AI‑Driven Educational Research Methodologies</h4></div></div></div>
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer pedagogy"><div class="events_item reveal-up" style="--reveal-delay: .16s"><div class="thumb"><a href="#"><img src="assets/images/course-05.jpg" alt="Innovative Assessment Strategies with AI" /></a><span class="category">Future Insights</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Matthew Nyaaba</span><h4>Innovative Assessment Strategies with AI</h4></div></div></div>
+          <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer research"><div class="events_item reveal-up" style="--reveal-delay: .20s"><div class="thumb"><a href="#"><img src="assets/images/course-06.jpg" alt="Empowering Pre‑Service Teachers through AI" /></a><span class="category">Teacher Empowerment</span><span class="price"><h6><em>Free</em></h6></span></div><div class="down-content"><span class="author">Bismark Nyaaba Akanzire</span><h4>Empowering Pre‑Service Teachers through AI</h4></div></div></div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Programs Section End ***** -->
+
+    <!-- ***** Prompt Mastery Webinar Series Section Start ***** -->
+    <section class="section webinars" id="webinars">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-heading">
+              <h6>Education Sessions</h6>
+              <h2>Prompt Mastery Webinar Series</h2>
+              <p>Thank you for being part of our 3‑Day Prompt Mastery Webinar Series. Revisit recordings, explore tools, and share feedback to help us improve future sessions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="webinar-card reveal-left">
+              <h4 class="mb-3">Session Recordings</h4>
+              <ul class="list-unstyled ms-0">
+                <li class="mb-2">Day 1 - Prompt Foundations (Vanessa Willemse): <a href="https://lnkd.in/e-TvxdPE" target="_blank" rel="noopener">Watch</a></li>
+                <li class="mb-2">Day 2 - Effective Prompts (Dr. Benjamin Quarshie): <a href="https://lnkd.in/eq5H5bT7" target="_blank" rel="noopener">Watch</a></li>
+                <li class="mb-2">Day 3 - Practical Strategies (Matthew Nyaaba and GenAI‑ERA Team): <a href="https://lnkd.in/eibDpncf" target="_blank" rel="noopener">Watch</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="webinar-card reveal-right">
+              <h4 class="mb-3">Practical Tools &amp; Resources</h4>
+              <ul class="list-unstyled ms-0">
+                <li class="mb-2">OCEAN Personality Self‑Assessment: <a href="https://lnkd.in/e7FAdNiP" target="_blank" rel="noopener">Start</a> — Discover your personality profile and integrate it into your prompting style.</li>
+                <li class="mb-2">Group Playground Prompts: <a href="https://lnkd.in/ezvwrhKm" target="_blank" rel="noopener">Explore</a> — Find the experimentation space and shared prompts.</li>
+                <li class="mb-2">Example Prompts Collection: <a href="https://lnkd.in/eZCP94AR" target="_blank" rel="noopener">Browse</a> — Real‑world prompt examples to adapt and use.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-lg-12 text-center">
+            <a class="btn btn-warning" href="https://lnkd.in/eNFYDX9c" target="_blank" rel="noopener">Give Feedback (5 minutes)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Prompt Mastery Webinar Series Section End ***** -->
+
+    <!-- ***** News Section Start ***** -->
+    <section class="section milestones" id="milestones">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-heading">
+              <h6>News</h6>
+              <h2>Leadership Recognition &amp; Community Impact</h2>
+              <p>Honoring leaders whose dedication has accelerated GenAI literacy initiatives, forged new partnerships, and inspired educators across regions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- News Card 1: Dr. Quarshie -->
+          <div class="col-lg-4 col-md-6">
+            <div class="milestone-card reveal-left h-100">
+              <div class="milestone-thumb">
+                <img src="assets/images/celebrate-01.jpg" alt="Celebrating Excellence: Dr. Benjamin Quarshie recognized in Ghana Teacher Prize 2025" />
+              </div>
+              <div class="milestone-content">
+                <h4>Celebrating Excellence!</h4>
+                <p>We are proud to celebrate <strong>Dr. Benjamin Quarshie</strong>, the Assistant Research &amp; Grants Director of GenAI‑ERA, for emerging as the <strong>2nd Runner‑Up for College Lecturer</strong> in the <strong>Ghana Teacher Prize 2025</strong>!</p>
+                <p>Your dedication to teaching, research, and service continues to inspire our community and advance the mission of GenAI‑ERA. We are truly proud of you, <strong>Dr. Benjamin Quarshie</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 2: Mrs. Vanessa Willemse -->
+          <div class="col-lg-4 col-md-6">
+            <div class="milestone-card reveal-up h-100">
+              <div class="milestone-thumb">
+                <img src="assets/images/celebrate-02.jpg" alt="Appointment Announcement: Mrs. Vanessa Willemse as Director of International Relations" />
+              </div>
+              <div class="milestone-content">
+                <h4>Appointment Announcement</h4>
+                <p>As we wait to unveil our newly appointed executive members, we are eager to join the <strong>Northern Cape Department of Education, South Africa</strong>, in officially announcing and celebrating the appointment of <strong>Mrs. Vanessa Willemse</strong> as GenAI‑ERA's <strong>Director of International Relations</strong>.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Card 3: Dr. Patrick Kyeremeh -->
+          <div class="col-lg-4 col-md-6">
+            <div class="milestone-card reveal-right h-100">
+              <div class="milestone-thumb">
+                <img src="assets/images/celebrate-03.jpg" alt="Congratulations to Dr. Patrick Kyeremeh on HOD appointment" />
+              </div>
+              <div class="milestone-content">
+                <h4>Congratulations, Dr. Patrick Kyeremeh!</h4>
+                <p>The entire GenAI‑ERA community proudly congratulates you on your well‑deserved appointment as <strong>Head of the Department for Mathematics Education &amp; ICT</strong> at <strong>St. Joseph's College of Education</strong>.</p>
+                <p>This achievement is a testament to your dedication, leadership, and unwavering commitment to excellence in mathematics education. We are truly proud of you, <strong>Dr. Kyeremeh</strong>, and we have no doubt that you will continue to inspire both your colleagues and students in this new role.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** News Section End ***** -->
+
+    <!-- ***** Leadership Section Start ***** -->
+    <div class="team section" id="team">
+      <div class="container">
+        <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>Leadership Team</h6><h2>Executive Members</h2><p>Meet our diverse leadership team bringing together expertise from across Africa and beyond, united by a shared commitment to transforming education through AI innovation.</p></div></div></div>
+
+        <!-- Combined List: Board first, then other executives -->
+        <div class="row">
+          <!-- Former Board of Directors (first) -->
+          <div class="col-lg-3 col-md-6 mb-4 board-member"><div class="team-member-card"><img src="assets/images/member-01.jpg" alt="Matthew Nyaaba" /><h4>Matthew Nyaaba</h4><div class="position">Founder</div><div class="location">AI4STEM Education Center, University of Georgia, USA</div><div class="description mt-2">Leading GenAI‑ERA's strategic vision, international partnerships, and innovation in AI education across African educational systems.</div><div class="d-grid gap-2 mb-2"><a class="btn btn-outline-primary" href="#" data-bs-toggle="modal" data-bs-target="#modal-founders-motivation">Meet The Founder</a></div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/matthew-nyaaba-161280126?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Matthew Nyaaba on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 board-member"><div class="team-member-card"><img src="assets/images/member-02.jpg" alt="Macharious Nabang" /><h4>Macharious Nabang</h4><div class="position">Co‑Founder ; Digital &amp; Communications Director</div><div class="location">Bagabaga College of Education, Ghana</div><div class="description">Overseeing digital infrastructure, communications strategy, and technology integration across GenAI‑ERA platforms and initiatives.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/macharious-nabang-789aa4116?utm_source=share&utm_campaign=share_via&u" target="_blank" rel="noopener" aria-label="Macharious Nabang on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 board-member"><div class="team-member-card"><img src="assets/images/member-03.jpg" alt="Bismark Nyaaba Akanzire" /><h4>Bismark Nyaaba Akanzire</h4><div class="position">Co‑Founder &amp; Pedagogy Director</div><div class="location">Gambaga College of Education, Ghana</div><div class="description">Developing pedagogical frameworks, teacher training programs, and ensuring quality standards in AI integration methodologies.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/bismark-akanzire-840864129?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="Bismark Nyaaba Akanzire on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 board-member"><div class="team-member-card"><img src="assets/images/member-04.jpg" alt="Dr. Patrick Kyeremeh" /><h4>Dr. Patrick Kyeremeh</h4><div class="position">Co‑Founder &amp; Research Director</div><div class="location">St. Joseph's College of Education, Ghana</div><div class="description">Leading research initiatives, scholarly publications, and coordinating collaborative projects in AI‑enhanced education.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/patrick-kyeremeh-phd-b0a291159?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Dr. Patrick Kyeremeh on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+
+          <!-- Remaining Executive Members -->
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/dr-quarshie-ghana.jpg" alt="Dr. Quarshie" /><h4>Dr. Benjamin Quarshie</h4><div class="position">Research &amp; Grants Director</div><div class="location">Mampong technical college of Education, Ghana</div><div class="description">Securing funding, managing research portfolios, and developing sustainable grant strategies for AI education initiatives.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/benjamin-quarshie-376b6380?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Dr. Benjamin Quarshie on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/craig-gibbs-south-africa.jpg" alt="Craig Gibbs" /><h4>Craig Gibbs</h4><div class="position">Deputy Research and Grant</div><div class="location">JET Education Services, South Africa</div><div class="description">Coordinating research activities, documentation, and stakeholder communications; supporting grant pipelines and reporting.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/craig-gibbs-8b4b5b116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="Craig Gibbs on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/vanessa-willemse-south-africa.jpg" alt="Vanessa Willemse" /><h4>Vanessa Willemse</h4><div class="position">Director, International Relations</div><div class="location">Northern Cape Provincial Teacher Development Institute, South Africa</div><div class="description">Building international partnerships and coordinating cross‑border programs that expand GenAI‑ERA's global footprint.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/vanessa-willemse-64b02aa2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Vanessa Willemse on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/saeed-maigari-nigeria.jpg" alt="Dr. Saeed Maigari" /><h4>Engr. Dr. Saeed Maigari</h4><div class="position">Deputy Director, International Relations</div><div class="location">Federal University of Transportation, Daura, Nigeria</div><div class="description">Supporting international collaborations, MOUs, and exchange activities with universities and NGOs.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/engr-dr-saeed-maigari-8276963a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_apptm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Dr. Saeed Maigari on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/dorcas-adomina-ghana.jpg" alt="Dorcas Adomina" /><h4>Dorcas Adomina</h4><div class="position">Director, Equity &amp; Inclusion</div><div class="location">University of Education, Winneba, Ghana</div><div class="description">Embedding equity, accessibility, and inclusion across programs; leading DEI audits and guidelines.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/dorcas-eyram-96657722a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Dorcas Adomina on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/ellen-kwarteng-ghana.jpg" alt="Ellen Kwarteng" /><h4>Ellen Kwarteng</h4><div class="position">Program Manager</div><div class="location">St Joseph's College of Education, Ghana</div><div class="description">Operational oversight of events, webinars, and PD cohorts; monitoring KPIs and reporting.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/ellen-kwarteng-524128272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="Ellen Kwarteng on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <!-- Finance & Operations Lead card removed per request -->
+          <div class="col-lg-3 col-md-6 mb-4 executive-member"><div class="team-member-card"><img src="assets/images/executives/sechema-koma-lesotho.jpg" alt="Sechaba Nephtally Koma" /><h4>Sechaba Nephtally Koma</h4><div class="position">Teaching,Learning &amp; Innovation Lead</div><div class="location">The National University of Lesotho, Lesotho</div><div class="description">Media relations, stakeholder engagement, and partnership pipelines across regions.</div><ul class="social-icons"><li><a href="https://www.linkedin.com/in/sechaba-nephtally-koma-466a1014b/?originalSubdomain=ls" target="_blank" rel="noopener" aria-label="Sechaba Nephtally Koma on LinkedIn"><i class="fab fa-linkedin"></i></a></li></ul></div></div>
+          <!-- New Executive Member: Technical Lead -->
+          <div class="col-lg-3 col-md-6 mb-4 executive-member">
+            <div class="team-member-card">
+              <img class="face-center" src="assets/images/executives/jerry-etornam-kudaya-ghana.jpg" alt="Jerry Etornam Kudaya" />
+              <h4>Jerry Etornam Kudaya</h4>
+              <div class="position">Technical Lead</div>
+              <div class="location">Kwame Nkrumah University of Science and Technology, Ghana</div>
+              <div class="description">Leading the architecture and development of GenAI‑ERA platforms—ensuring reliability, security, and performance—while overseeing integrations, CI/CD, and technical best practices across web and data pipelines.</div>
+              <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/jerry-kudaya-062730280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener" aria-label="Jerry Etornam Kudaya on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="text-center text-muted mt-2">Thanks for your commitments. <code>You are making a great impact in Africa</code> Your achievements do not go unnoticed.</p>
+      </div>
+    </div>
+    <!-- ***** Leadership Section End ***** -->
+
+    <!-- ***** Tools Section Start ***** -->
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>AI Tools</h6><h2>Platforms We Build &amp; Use</h2></div></div></div>
+        <div class="tools-grid">
+          <div class="tool-item">
+            <a class="tool-link" href="https://chatgpt.com/g/g-ei2C8xiFM-culturally-responsive-lesson-planner-crlp" target="_blank" rel="noopener" aria-label="Open Culturally Responsive Lesson Planner (CRLP)">
+              <div class="tool-icon">CRLP</div>
+              <h5>Culturally Responsive Lesson Planner</h5>
+              <p>Interactive, theory‑grounded lesson planning with required cultural slots (language, locale, assets, representation).</p>
+            </a>
+          </div>
+          <div class="tool-item">
+            <a class="tool-link" href="https://chatgpt.com/g/g-vAYgx3lLs-culturally-responsive-science-assessment-generator" target="_blank" rel="noopener" aria-label="Open CR Science Assessment Generator">
+              <div class="tool-icon">CRSciA</div>
+              <h5>CR Science Assessment Generator</h5>
+              <p>Generates and refines culturally responsive science items with rubric‑guided validation.</p>
+            </a>
+          </div>
+          <div class="tool-item">
+            <a class="tool-link" href="https://youtu.be/XkeO_Jr1f5A" target="_blank" rel="noopener" aria-label="Watch Teacher Voice Agent video on YouTube">
+              <div class="tool-icon">Voice</div>
+              <h5>Teacher Voice Agent</h5>
+              <p>A Context-Aware and Region-Specific AI Tool for Ghana Teacher Education.</p>
+            </a>
+          </div>
+          <div class="tool-item">
+            <a class="tool-link" href="https://chatgpt.com/g/g-Fs5wk2FsM-inductive-thematic-analysis" target="_blank" rel="noopener" aria-label="Open Inductive Thematic Analysis tool">
+              <div class="tool-icon">ITA</div>
+              <h5>Inductive Thematic Analysis</h5>
+              <p>Supports qualitative coding and theme development from raw data, guiding codebook creation and transparent analysis workflows.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Tools Section End ***** -->
+
+  <!-- ***** Publications Section Start ***** -->
+    <section class="section" id="research">
+      <div class="container">
+  <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>Publications</h6><h2>Publications</h2><p>Selected works and ongoing scholarship from GenAI‑ERA leadership and collaborators.</p></div></div></div>
+        <div class="resource-grid">
+          <div class="resource-card reveal-up" style="--reveal-delay:.0s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <span class="badge">Journal</span>
+            <h5>Developing a Theory‑Grounded AI Tool for the Generation of Culturally Responsive Lesson Plans</h5>
+            <p class="meta">Matthew Nyaaba; Xiaoming Zhai</p>
+            <a class="stretched-link" href="https://doi.org/10.1016/j.caeai.2025.100474" target="_blank" rel="noopener" aria-label="Read DOI article on CR Lesson Planner"></a>
+          </div>
+          <div class="resource-card reveal-up" style="--reveal-delay:.06s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <span class="badge">Journal</span>
+            <h5>Generative AI in teacher education: Teacher educators’ perception and preparedness</h5>
+            <p class="meta">Bismark Nyaaba Akanzire; Matthew Nyaaba; Macharious Nabang</p>
+            <a class="stretched-link" href="https://doi.org/10.30935/jdet/15887" target="_blank" rel="noopener" aria-label="Read JDET article"></a>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  <!-- ***** Publications Section End ***** -->
+
+    <!-- ***** Grants & Scholarships Section Start ***** -->
+    <section class="section" id="grants">
+      <div class="container">
+        <div class="row"><div class="col-lg-12 text-center"><div class="section-heading"><h6>Opportunities</h6><h2>Grants &amp; Scholarships</h2><p>Current awards and scholarship opportunities for GenAI‑ERA members.</p></div></div></div>
+        <div class="resource-grid">
+          <div class="resource-card reveal-left" style="--reveal-delay:.0s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <span class="badge">Award</span>
+            <h5>GenAI‑ERA awarded five slots: AI Foundations (Penn GSE)</h5>
+            <p>Five complimentary seats for the “AI Foundations: Leveraging AI for Student‑Centered Learning” program at University of Pennsylvania. A 5‑week online course for K‑12 educators focusing on ethical, equitable, student‑centered AI applications.</p>
+            <a class="stretched-link" href="https://platform.onlinelearning.upenn.edu/offering/ai-foundations-leveraging-ai-for-student-centered-learning-a0QKZ000000PE7T2AW" target="_blank" rel="noopener" aria-label="View Penn GSE AI Foundations program"></a>
+          </div>
+          <div class="resource-card reveal-right" style="--reveal-delay:.06s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <span class="badge">Scholarship</span>
+            <h5>ip Program – Application Form 2025</h5>
+            <p>She Code Africa, with Grow with Google and Coursera, offers 100% scholarships for African girls and women across: Prompting Essentials, AI Essentials, Cybersecurity, Data Analytics, Digital Marketing &amp; E‑commerce, IT Support, Project Management, and UX Design (24‑week program with Coursera Career Certificate).</p>
+            <a class="stretched-link" href="https://docs.google.com/forms/d/e/1FAIpQLSec3EMPxjsYqyNp9p1g9gwPhaNM-aSonZ_LbwbZNTgKnjZTpg/viewform" target="_blank" rel="noopener" aria-label="Apply to She Code Africa scholarship program"></a>
+          </div>
+          <div class="resource-card reveal-up" style="--reveal-delay:.12s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <span class="badge">Grant</span>
+            <h5>Spencer Research‑Practice Partnerships (RPP) Program</h5>
+            <p>Supports long‑term research partnerships that improve education practice and equity. Awards up to $400,000 for up to 3 years; pre‑proposal required.</p>
+            <a class="stretched-link" href="https://www.spencer.org/grant_types/research-practice-partnerships" target="_blank" rel="noopener" aria-label="View Spencer Research‑Practice Partnerships grant"></a>
+          </div>
+          <div class="resource-card reveal-up" style="--reveal-delay:.16s" role="link" tabindex="0" onclick="this.querySelector('a.stretched-link').click();" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); this.querySelector('a.stretched-link').click(); }">
+            <img src="assets/images/event-05.jpg" alt="GenAI‑ERA Fellowship" style="width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:12px;" />
+            <span class="badge">Fellowship</span>
+            <h5>GenAI‑ERA Fellowship: Authentic Curriculum &amp; Community Impact</h5>
+            <p>Fellowship for educators and researchers designing authentic, community‑responsive AI‑integrated curricula in underserved contexts. Fellows receive mentorship, collaborative research support, and visibility across the GenAI‑ERA network.</p>
+            <p class="meta">Focus: Equity, inclusion, and real‑world classroom impact.</p>
+            <a class="stretched-link" href="#contact" aria-label="Express interest in GenAI‑ERA Fellowship"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** Grants & Scholarships Section End ***** -->
+
+    <!-- ***** Contact Us Section Start ***** -->
+    <div class="contact-us section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 align-self-center">
+            <div class="section-heading">
+              <h6>Partner with Us</h6>
+              <h2>Collaboration drives our impact</h2>
+              <p>At GenAI‑ERA, we work with universities, NGOs, tech companies, and education agencies to advance AI literacy and research capacity across Africa through equitable and context‑aware innovation.</p>
+              <h6 class="mt-3">Partnership Pathways</h6>
+              <ul class="mb-3">
+                <li><strong>Program Sponsorship</strong><br />Fund AI training, teacher fellowships, or institutional exchange initiatives.</li>
+                <li><strong>Research Collaboration</strong><br />Co‑author studies, frameworks, and publications on ethical, inclusive AI in education.</li>
+                <li><strong>Event Co‑Hosting</strong><br />Collaborate on webinars, workshops, and innovation challenges for educators and students.</li>
+                <li><strong>Technology &amp; Resource Sharing</strong><br />Contribute digital tools, infrastructure, or expertise to support local innovation.</li>
+                <li><strong>Donations &amp; Grants</strong><br />Support our mission through financial or in‑kind contributions.</li>
+              </ul>
+              <p class="mb-0">Join us in shaping the future of AI in education—responsibly, inclusively, and together. To explore collaboration, support opportunities, or join our team, please complete this brief form or email us directly on <a href="mailto:genaiera1@gmail.com">genaiera1@gmail.com</a>. We respond to all inquiries within 24 hours.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="contact-us-content">
+              <div id="contact-success" class="alert alert-success d-none" role="alert" aria-live="polite">
+                Thank you! Your message was sent. We'll get back to you shortly.
+              </div>
+              <div id="contact-help" class="alert alert-info" role="status">
+                Having trouble submitting? You can email us directly at
+                <a href="mailto:genaiera1@gmail.com" aria-label="Email GenAI-ERA">genaiera1@gmail.com</a>
+                or <button type="button" id="copy-email" class="btn btn-link p-0 align-baseline" data-email="genaiera1@gmail.com">copy email</button>.
+              </div>
+              <form id="contact-form" action="https://formsubmit.co/genaiera1@gmail.com" method="post">
+                <div class="row">
+                  <div class="col-lg-12"><fieldset><input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="on" required /></fieldset></div>
+                  <div class="col-lg-12"><fieldset><input type="email" name="email" id="email" placeholder="Your E‑mail..." required /></fieldset></div>
+                  <div class="col-lg-12"><fieldset><textarea name="message" id="message" placeholder="Your Message" required></textarea></fieldset></div>
+                  <!-- FormSubmit config -->
+                  <input type="hidden" name="_subject" value="New message from GenAI‑ERA website" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_captcha" value="true" />
+                  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                  <input type="hidden" name="_next" id="contact-next" value="" />
+                  <div class="col-lg-12"><fieldset><button type="submit" id="form-submit" class="orange-button">Send Message Now</button></fieldset></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Contact Us Section End ***** -->
+
+    <!-- ***** Footer Section Start ***** -->
+    <footer>
+      <div class="container">
+        <div class="col-lg-12 text-center">
+          <p>
+            Copyright © 2025 GenAI‑ERA. All rights reserved.
+          </p>
+          <ul class="social-icons footer-social" aria-label="GenAI‑ERA social links">
+            <li>
+              <a href="https://www.youtube.com/@GenAIERA-g5t" target="_blank" rel="noopener" aria-label="GenAI‑ERA on YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/genai-for-educators-and-researchers-in-africa-genai-era/" target="_blank" rel="noopener" aria-label="GenAI‑ERA on LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/groups/310572715421357" target="_blank" rel="noopener" aria-label="GenAI‑ERA on Facebook">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  <!-- Scripts: fixed vendor paths and consolidated app logic -->
+  <script src="vendor/jquerry/jquery.min.js"></script>
+  <script src="vendor/boostrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+  </body>
+</html>
